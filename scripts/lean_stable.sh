@@ -23,6 +23,7 @@ git clone --depth=1 https://github.com/jerrykuku/luci-app-vssr
 git clone --depth=1 https://github.com/garypang13/luci-app-bypass
 svn co https://github.com/garypang13/openwrt-packages/trunk/lua-maxminddb
 git clone --depth=1 https://github.com/garypang13/smartdns-le
+#sed -i 's/smartdns-le/smartdns/g' luci-app-bypass/Makefile
 
 # Add mentohust & luci-app-mentohust
 git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust
@@ -155,10 +156,6 @@ pushd po2lmo
 make && sudo make install
 popd
 
-# Swap LAN WAN 
-# sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/etc/board.d/02_network 
-# sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
-
 # Change default shell to zsh
 sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 
@@ -166,8 +163,10 @@ sed -i 's/\/bin\/ash/\/usr\/bin\/zsh/g' package/base-files/files/etc/passwd
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='FusionWrt'' package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /DHDAXCW build $(TZ=UTC-8 date "+%Y.%m.%d") @ FusionWrt /g" package/lean/default-settings/files/zzz-default-settings
+# sed -i "s/FILES:=$(LINUX_DIR)/net/can/can-dev.ko/FILES:=$(LINUX_DIR)/drivers/net/can/dev/can-dev.ko \ package/kernel/linux/modules/can.mk
 
 # Custom configs
+# git am $GITHUB_WORKSPACE/patches/lean/*.patch
 echo -e " DHDAXCW's FusionWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
 
 # Add CUPInfo
