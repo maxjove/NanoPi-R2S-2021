@@ -11,6 +11,7 @@
 
 - 下载地址,目前已分stable稳定版和beta测试版,注意区分(感谢xenstar的提议)： https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
 - 精简版  ： https://github.com/DHDAXCW/NanoPi-R2S-R4S-2021-mini/releases
+- 2021年5月20日：今天https://cowtransfer.com/s/ada2ea35ac7543
 - 电报群：https://t.me/DHDAXCW
 - TG频道：https://t.me/FWR2SR4S
 # 赏个鸡腿吧
