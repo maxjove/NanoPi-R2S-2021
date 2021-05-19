@@ -1,9 +1,11 @@
 name: Build NanoPi R2S FusionWrt Stable
 on:
-schedule:
-  - cron: 0 16 * * *
-   watch:
-     types: started
+  repository_dispatch:
+  workflow_dispatch:
+  #schedule:
+    #- cron: 0 16 * * *
+  # watch:
+  #   types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -238,7 +240,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} Lean OpenWrt (Stable)
+          name: ${{ steps.tag.outputs.release_date }} Lean OpenWrt (Beta)
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
