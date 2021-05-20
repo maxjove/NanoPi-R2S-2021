@@ -6,10 +6,11 @@
 This month I have been begging without a computer (please be in the computer~). . .
 ### Default compilation
 
--Username: root Password: password Management IP: 192.168.2.1
+- Username: root Password: password Management IP: 192.168.2.1
 
--Download link, you can choose the stable or beta version(thanks for xenstar's suggestion): https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
--Telegram group: https://t.me/DHDAXCW
+- Download link, you can choose the stable or beta version(thanks for xenstar's suggestion): https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
+- Telegram chat group: https://t.me/DHDAXCW
+- Telegram Channel: https://t.me/FWR2SR4S
 # Enjoy a chicken drumstick
  ![Alt ​​text](data/2.jpg?raw=true "Title")
 ### If you think this project is helpful to you, you can donate to us to encourage the sustainable development and perfection of the project
