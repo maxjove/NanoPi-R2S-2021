@@ -15,14 +15,16 @@
 - 电报群：https://t.me/DHDAXCW
 - TG频道：https://t.me/FWR2SR4S
 # 赏个鸡腿吧
- ![Alt text](data/2.jpg?raw=true "Title")
+ ![捐赠](data/2.jpg?raw=true "Title")
 ### 如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
 # 插件展示
- ![Alt text](data/20.jpg?raw=true "Title")
+ ![插件展示](data/20.jpg?raw=true "Title")
 ## 提示
  - 我的固件加了动态超频，不管热不热这是取决后台运行程序在跑什么。
  - 感觉很热  就加风扇，推荐 风扇6cm×6cm，薄1cm，usb也行 或者端子线zh1.5
  - 更新模块有很严重的问题 目前开发者无法修复
+### 版本日志 5.20
+ - 稳定版新增广告屏蔽大师Plus+和AdGuardHome
 ### 版本日志 5.14
 - 新增bypass插件
 - 修复跳频问题
