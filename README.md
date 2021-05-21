@@ -1,7 +1,5 @@
 # 中文简体 | [English](https://github.com/DHDAXCW/NanoPi-R2S-2021/blob/main/EngLish.md)
 # NanoPi-R2S-2021 每天自动更新插件和内核版本。
-# 重大通知
-由于[骷髅头(DHDAXCW)](https://github.com/DHDAXCW/)最近在维护x86的FusionWrt固件，目前R2S已经交由[Topsy Chen(thomaswcy)](https://github.com/thomaswcy/)和[MedyMa](https://github.com/MedyMa/)进行管理和维护
 ## 👉使用本固件前，请严格遵守国家互联网使用相关法律规定,不要违反国家法律规定！👈
 ## ``` 由于源码无法从硬盘拿出来，只好重新做了。，目前重构进度只有70%用在本镜像闭源上，后期尽量处理，这一个月已更新了下面这几点东西 ```
 ## 强烈推荐三星TF卡\海康TF卡。哪怕是很难刷上的固件，只有三星刷上可以开机。
