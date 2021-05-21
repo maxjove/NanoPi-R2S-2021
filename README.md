@@ -21,10 +21,14 @@
 ### 如果你觉得此项目对你有帮助，可以捐助我们，以鼓励项目能持续发展，更加完善
 # 插件展示
  ![插件展示](data/20.jpg?raw=true "Title")
+# 重大通知
+由于[骷髅头(DHDAXCW)](https://github.com/DHDAXCW/)最近在维护x86的FusionWrt固件，目前R2S已经交由[Topsy Chen(thomaswcy)](https://github.com/thomaswcy/)和[MedyMa](https://github.com/MedyMa/)进行管理和维护
 ## 提示
  - 我的固件加了动态超频，不管热不热这是取决后台运行程序在跑什么。
  - 感觉很热  就加风扇，推荐 风扇6cm×6cm，薄1cm，usb也行 或者端子线zh1.5
  - 更新模块有很严重的问题 目前开发者无法修复
+### 版本日志 5.21
+由于vssr插件导致无法进入后台，暂时先删除vssr，期间请使用bypass，ssrp，passwall，helloworld或其他插件
 ### 版本日志 5.20
  - 稳定版新增广告屏蔽大师Plus+和AdGuardHome
 ### 版本日志 5.14
