@@ -168,7 +168,7 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-18.04
-    if: github.repository == 'DHDAXCW/NanoPi-R4S-2021'
+    if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -228,7 +228,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-Lean"
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-2Lean"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
