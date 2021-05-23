@@ -168,7 +168,7 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-18.04
-    if: github.repository == 'DHDAXCW/NanoPi-R2S-2021'
+    if: github.repository == 'DHDAXCW/NanoPi-R4S-2021'
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -228,7 +228,7 @@ jobs:
         id: tag
         if: env.UPLOAD_RELEASE == 'true' && !cancelled()
         run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-FusionWrt Stable"
+          echo "::set-output name=release_tag::$(date +"%Y.%m.%d")-精简版"
           echo "::set-output name=release_date::$(date +"%Y.%m.%d")"
           touch release.txt
           [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
@@ -238,9 +238,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: steps.tag.outputs.status == 'success' && !cancelled()
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: ${{ steps.tag.outputs.release_date }} FusionWrt (Stable)
+          name: ${{ steps.tag.outputs.release_date }} R4S 正式版 OpenWrt
           tag_name: ${{ steps.tag.outputs.release_tag }}
           body_path: release.txt
           files: ${{ env.FIRMWARE }}/*
@@ -250,6 +250,15 @@ jobs:
         with:
           retain_days: 1
           keep_minimum_runs: 1
+
+      - name: Remove old Releases
+        uses: dev-drprasad/delete-older-releases@v0.1.0
+        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
+        with:
+          keep_latest: 20
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Delete Artifacts
         uses: geekyeggo/delete-artifact@v1
