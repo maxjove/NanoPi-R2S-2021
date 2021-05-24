@@ -9,8 +9,6 @@
 
 
 - 用户名：root 密码：password 管理IP：192.168.2.1
-
-- 下载地址,目前已分stable稳定版和beta测试版,注意区分( 感谢xenstar的提议垃圾玩意)： https://github.com/DHDAXCW/NanoPi-R2S-2021/releases
 - 精简版  ： https://github.com/DHDAXCW/NanoPi-R2S-R4S-2021-mini/releases
 - 2021年5月21日：互换 https://cowtransfer.com/s/ada2ea35ac7543
 - 稳定版 https://cowtransfer.com/s/80b12897a38841
