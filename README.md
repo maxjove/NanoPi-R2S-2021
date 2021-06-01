@@ -8,6 +8,7 @@
 ### 默认编译 
 
 
+
 - 用户名：root 密码：password 管理IP：192.168.2.1
 - 精简版  ： https://github.com/DHDAXCW/NanoPi-R2S-R4S-2021-mini/releases
 - 2021年5月21日：互换 https://cowtransfer.com/s/ada2ea35ac7543
