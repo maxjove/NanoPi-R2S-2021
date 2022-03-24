@@ -163,3 +163,6 @@ echo 'net.bridge.bridge-nf-call-iptables=0' >> package/base-files/files/etc/sysc
 echo 'net.bridge.bridge-nf-call-ip6tables=0' >> package/base-files/files/etc/sysctl.conf
 echo 'net.bridge.bridge-nf-call-arptables=0' >> package/base-files/files/etc/sysctl.conf
 echo 'net.bridge.bridge-nf-filter-vlan-tagged=0' >> package/base-files/files/etc/sysctl.conf
+
+# Test kernel 5.10
+sed -i 's/5.15/5.10/g' target/linux/rockchip/Makefile
