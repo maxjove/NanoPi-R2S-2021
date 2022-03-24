@@ -12,6 +12,8 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
 popd
+#Delete
+rm -rf ./package/kernel/linux/modules/fs.mk
 
 # Clone community packages to package/community
 mkdir package/community
