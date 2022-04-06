@@ -79,13 +79,6 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
-# Add extra wireless drivers
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/rtl8812au-ac
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/rtl8821cu
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/rtl8188eu
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/rtl8192eu
-#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/kernel/rtl88x2bu
-
 # Add luci-udptools
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/luci-udptools
 svn co https://github.com/zcy85611/Openwrt-Package/trunk/udp2raw
