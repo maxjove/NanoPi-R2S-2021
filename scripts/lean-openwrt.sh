@@ -75,9 +75,6 @@ svn co https://github.com/zcy85611/Packages/trunk/luci-udptools
 svn co https://github.com/zcy85611/Packages/trunk/udp2raw
 svn co https://github.com/zcy85611/Packages/trunk/udpspeeder
 
-# Add luci-app-oled (R2S Only)
-git clone --depth=1 https://github.com/NateLol/luci-app-oled
-
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
