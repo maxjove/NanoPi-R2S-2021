@@ -2,7 +2,7 @@
 ## 每天自动更新 
 ## 默认地址：192.168.2.1
 ## 密码 password
-* 机场推荐：https://i.8qwfh.club/hrUE
+* 机场推荐：https://i.9jdgl.top/hrUE
 ## References
 * https://github.com/SuLingGG/OpenWrt-Rpi
 * https://github.com/coolsnowwolf/lede
