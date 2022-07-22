@@ -6,14 +6,6 @@
 # Blog: https://p3terx.com
 #=================================================
 
-rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb
-rm -rf package/kernel/mac80211
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/mac80211 package/kernel/mac80211
-rm -rf package/kernel/rtl8821cu
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu package/kernel/rtl8821cu
-rm -rf package/kernel/mwlwifi
-svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/mwlwifi package/kernel/mwlwifi
-
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
