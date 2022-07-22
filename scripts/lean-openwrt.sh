@@ -5,6 +5,15 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
+
+rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d/usb
+rm -rf package/kernel/mac80211
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/mac80211 package/kernel/mac80211
+rm -rf package/kernel/rtl8821cu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu package/kernel/rtl8821cu
+rm -rf package/kernel/mwlwifi
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/mwlwifi package/kernel/mwlwifi
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
@@ -34,9 +43,6 @@ git clone --depth=1 https://github.com/ysc3839/luci-proto-minieap
 
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash
-
-# Add luci-app-onliner (need luci-app-nlbwmon)
-git clone --depth=1 https://github.com/rufengsuixing/luci-app-onliner
 
 # Add luci-app-adguardhome
 svn co https://github.com/Lienol/openwrt-package/branches/other/luci-app-adguardhome
@@ -70,11 +76,6 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
-# Add luci-udptools
-svn co https://github.com/zcy85611/Packages/trunk/luci-udptools
-svn co https://github.com/zcy85611/Packages/trunk/udp2raw
-svn co https://github.com/zcy85611/Packages/trunk/udpspeeder
-
 # Add OpenAppFilter
 git clone --depth=1 https://github.com/destan19/OpenAppFilter
 popd
@@ -83,17 +84,6 @@ popd
 pushd package/network/services
 svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
 svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
-popd
-
-# Add luci-app-linkease
-pushd package/network/services
-svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease
-svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
-popd
-
-# Add Pandownload
-pushd package/lean
-svn co https://github.com/immortalwrt/packages/trunk/net/pandownload-fake-server
 popd
 
 # Mod zzz-default-settings
@@ -141,4 +131,4 @@ echo 'net.bridge.bridge-nf-call-arptables=0' >> package/base-files/files/etc/sys
 echo 'net.bridge.bridge-nf-filter-vlan-tagged=0' >> package/base-files/files/etc/sysctl.conf
 
 # Test kernel 5.10
-sed -i 's/5.10/5.15/g' target/linux/rockchip/Makefile
+#sed -i 's/5.10/5.15/g' target/linux/rockchip/Makefile
